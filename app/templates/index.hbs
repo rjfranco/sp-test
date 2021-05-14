@@ -1,29 +1,16 @@
 {{page-title "Services"}}
 
-<section>
-  <header>
-    <h1>Request an Appointment</h1>
-  </header>
-  <aside>
-    <ol>
-      <li class="active">Select Service</li>
-      <li>Select Location</li>
-      <li>Select Date & Time</li>
-      <li>Your Information</li>
-    </ol>
-  </aside>
-  <main>
-    <ul>
-      {{#each @model as |service|}}
-        <li>
-          <h4>{{service.description}}</h4>
-          <small>{{duration service.duration}}</small>
+<AppointmentContainer @step="1">
+  <ul>
+    {{#each @model as |service|}}
+      <li>
+        <h4>{{service.description}}</h4>
+        <small>{{duration service.duration}}</small>
 
-          <LinkTo @route="location" @model={{service}}>
-            Select
-          </LinkTo>
-        </li>
-      {{/each}}
-    </ul>
-  </main>
-</section>
+        <LinkTo @route="location" @model={{service}}>
+          Select
+        </LinkTo>
+      </li>
+    {{/each}}
+  </ul>
+</AppointmentContainer>
