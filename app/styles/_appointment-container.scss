@@ -1,0 +1,86 @@
+@use 'colors' as *;
+@use 'globals' as *;
+
+.appointment-container {
+  background: $white;
+  border: .0625rem solid $grey;
+  border-radius: $border-radius;
+  box-shadow: 0 0 1rem 0 $black-transparent-01;
+  display: grid;
+  grid-template-columns: 18rem auto;
+  grid-template-rows: auto 1fr;
+  flex-grow: 1;
+  margin: 3rem;
+  max-width: 64rem;
+
+  header {
+    border-bottom: .0625rem solid $grey;
+    grid-column-end: span 2;
+    padding: 1.5rem 2.25rem 1.125rem;
+
+    h1 {
+      font-weight: 300;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+  }
+
+  > aside {
+    border-right: .0625rem solid $grey;
+
+    > ol {
+      counter-reset: counter 0;
+      list-style: none;
+      margin: 2rem 0 0 2rem;
+      padding: 0;
+
+      li {
+        align-items: center;
+        color: $grey-dark;
+        counter-increment: counter;
+        display: flex;
+        font-size: .875rem;
+        letter-spacing: .0625rem;
+        padding: 0 0 0 .5em;
+        text-transform: uppercase;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+
+        &::before {
+          align-items: center;
+          border: .0625rem solid $grey-dark;
+          border-radius: .8rem;
+          color: $grey-dark;
+          content: counter(counter);
+          display: inline-flex;
+          height: 1.375rem;
+          justify-content: center;
+          margin-right: .5rem;
+          width: 1.375rem;
+        }
+
+        &.active {
+          &::before {
+            border-color: $blue;
+            color: $blue;
+          }
+
+          ~ li {
+            color: $grey;
+
+            &::before {
+              border-color: $grey;
+              color: $grey;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > main {
+    background: $grey-light;
+  }
+}
