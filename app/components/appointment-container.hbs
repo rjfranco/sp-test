@@ -5,7 +5,13 @@
   <aside>
     <ol>
       <li class={{if this.isService "active"}}>Service</li>
-      <li class={{if this.isLocation "active"}}>Select Location</li>
+      <li class={{if this.isLocation "active"}}>
+        Select Location
+        {{#if this.hasServiceOptions}}
+          <span class="service-option"?>{{@serviceType}}</span>
+          <span class="service-option">{{@serviceDuration}}</span>
+        {{/if}}
+      </li>
       <li>Select Date & Time</li>
       <li>Your Information</li>
     </ol>

@@ -1,8 +1,12 @@
 {{page-title "Locations"}}
 
-<AppointmentContainer @step="2">
+<AppointmentContainer
+  @step="2"
+  @serviceDuration={{duration @model.service.duration}}
+  @serviceType={{@model.service.description}}
+>
   <ul>
-    {{#each @model as |location|}}
+    {{#each @model.locations as |location|}}
       <li>
         {{#if location.isVideo}}
           👨🏻‍💻
