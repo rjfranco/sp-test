@@ -1,2 +1,29 @@
-{{page-title "Location"}}
-{{outlet}}
+{{page-title "Locations"}}
+
+<section>
+  <header>
+    <h1>Request an Appointment</h1>
+  </header>
+  <aside>
+    <ol>
+      <li>Select Service</li>
+      <li class="active">Select Location</li>
+      <li>Select Date & Time</li>
+      <li>Your Information</li>
+    </ol>
+  </aside>
+  <main>
+    <ul>
+      {{#each @model as |service|}}
+        <li>
+          <h4>{{service.description}}</h4>
+          <small>{{duration service.duration}}</small>
+
+          <LinkTo @route="location" @model={{service}}>
+            Select
+          </LinkTo>
+        </li>
+      {{/each}}
+    </ul>
+  </main>
+</section>
