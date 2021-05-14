@@ -1,0 +1,50 @@
+@use 'colors' as *;
+@use 'globals' as *;
+
+.service-list {
+  padding: 0;
+  list-style: none;
+  margin: 2rem;
+
+  li {
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: 0 0 .5rem 0 $black-transparent-01;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    padding: 2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      color: $grey-dark;
+      font-weight: normal;
+      font-size: 1.125rem;
+      margin: 0 0 1rem;
+    }
+
+    small {
+      color: $grey-dark;
+      font-size: .825rem;
+    }
+
+    a {
+      align-self: center;
+      background: $blue;
+      border-radius: $border-radius;
+      color: $white;
+      display: block;
+      grid-row-end: span 2;
+      padding: .75rem 1rem .625rem;
+      text-decoration: none;
+
+      &:hover {
+        background: mix($black, $blue, 20%);
+      }
+    }
+  }
+}
