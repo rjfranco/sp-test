@@ -19,7 +19,9 @@
           <h4>{{service.description}}</h4>
           <small>{{duration service.duration}}</small>
 
-          <button>Select</button>
+          <LinkTo @route="location" @model={{service}}>
+            Select
+          </LinkTo>
         </li>
       {{/each}}
     </ul>
