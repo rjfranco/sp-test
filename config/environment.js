@@ -6,12 +6,6 @@ module.exports = function (environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
-    // I would not normally include secrets like this, this is only for testing and I'll
-    // probably rotate it fairly soon
-    'mapbox-gl': {
-      accessToken:
-        'pk.eyJ1IjoicmpmcmFuY28iLCJhIjoiY2tvbzExejc5MDVyajJuczFpNmxsbHQ4ZCJ9.60Nl4SVYZrQJWJwGh3isRA',
-    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
