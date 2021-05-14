@@ -34,7 +34,6 @@
       padding: 0;
 
       li {
-        align-items: center;
         color: $grey-dark;
         counter-increment: counter;
         display: flex;
@@ -42,6 +41,18 @@
         letter-spacing: .0625rem;
         padding: 0 0 0 .5em;
         text-transform: uppercase;
+
+        > div {
+          margin-top: .3125rem;
+        }
+
+        .service-option {
+          color: $blue;
+          display: block;
+          letter-spacing: normal;
+          margin: .25rem 0;
+          text-transform: none;
+        }
 
         &:not(:last-child) {
           margin-bottom: 1rem;

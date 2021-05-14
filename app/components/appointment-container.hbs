@@ -4,16 +4,18 @@
   </header>
   <aside>
     <ol>
-      <li class={{if this.isService "active"}}>Service</li>
+      <li class={{if this.isService "active"}}><div>Service</div></li>
       <li class={{if this.isLocation "active"}}>
-        Select Location
-        {{#if this.hasServiceOptions}}
-          <span class="service-option"?>{{@serviceType}}</span>
-          <span class="service-option">{{@serviceDuration}}</span>
-        {{/if}}
+        <div>
+          Select Location
+          {{#if this.hasServiceOptions}}
+            <span class="service-option">{{@serviceType}}</span>
+            <span class="service-option">{{@serviceDuration}}</span>
+          {{/if}}
+        </div>
       </li>
-      <li>Select Date & Time</li>
-      <li>Your Information</li>
+      <li><div>Select Date & Time</div></li>
+      <li><div>Your Information</div></li>
     </ol>
   </aside>
   <main>

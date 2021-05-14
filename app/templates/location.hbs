@@ -2,8 +2,8 @@
 
 <AppointmentContainer
   @step="2"
-  @serviceDuration={{duration @model.service.duration}}
-  @serviceType={{@model.service.description}}
+  @serviceDuration={{duration this.serviceDuration}}
+  @serviceType={{this.serviceType}}
 >
   <ul>
     {{#each @model.locations as |location|}}
