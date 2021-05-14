@@ -5,17 +5,20 @@
   @serviceDuration={{duration this.serviceDuration}}
   @serviceType={{this.serviceType}}
 >
-  <ul>
+  <ul class="location-list">
     {{#each @model.locations as |location|}}
       <li>
-        {{#if location.isVideo}}
-          👨🏻‍💻
-        {{else}}
-          🗺
-        {{/if}}
-        <hr />
+        <div class="thumb">
+          {{#if location.isVideo}}
+            👨🏻‍💻
+          {{else}}
+            🗺
+          {{/if}}
+        </div>
+
         <h4>{{location.name}}</h4>
         <h5>{{location.phone}}</h5>
+
         <button {{on "click" this.select}}>Select</button>
       </li>
     {{/each}}

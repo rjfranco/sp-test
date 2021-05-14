@@ -1,0 +1,57 @@
+@use 'colors' as *;
+@use 'globals' as *;
+
+.location-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: min-content min-content min-content;
+  list-style: none;
+  padding: 0;
+  margin: 2rem;
+
+  li {
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: 0 0 .5rem 0 $black-transparent-01;
+    padding: 1rem;
+
+    .thumb {
+      align-items: center;
+      background: linear-gradient(135deg, $blue, mix($blue, $white, 50%));
+      border-radius: $border-radius;
+      display: flex;
+      font-size: 6rem;
+      height: 12rem;
+      justify-content: center;
+      width: 12rem;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin: 1rem .5rem .5rem;
+    }
+
+    h5 {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: .5rem .5rem 1rem;
+    }
+
+    button {
+      border-radius: $border-radius;
+      background: $blue;
+      border: 0;
+      border-radius: $border-radius;
+      color: $white;
+      cursor: pointer;
+      display: block;
+      padding: .75rem 1rem .625rem;
+      width: 100%;
+
+      &:hover {
+        background: mix($black, $blue, 20%);
+      }
+    }
+  }
+}
