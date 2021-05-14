@@ -1,7 +1,16 @@
 # sp-test
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is mostly a default ember application, there are some notes regarding potential changes though:
+
+To set the clinicianId / portalBaseUrl, you can configure them in config/environment.js
+
+At the time, portalBaseUrl is mostly ignored, in order for it to function in the app,
+you'll need to uncomment the line in the application adapter – however this will not work
+if the target server does not support CORS, instead you can update the proxy url in
+the .ember-cli file under "proxy"
+
+Besides that, running the app should be fairly simple, the standard `npm i` and `npm start`
+will work.
 
 ## Prerequisites
 
