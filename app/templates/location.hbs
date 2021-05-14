@@ -4,7 +4,15 @@
   <ul>
     {{#each @model as |location|}}
       <li>
-        location data
+        {{#if location.isVideo}}
+          👨🏻‍💻
+        {{else}}
+          🗺
+        {{/if}}
+        <hr />
+        <h4>{{location.name}}</h4>
+        <h5>{{location.phone}}</h5>
+        <button {{on "click" this.select}}>Select</button>
       </li>
     {{/each}}
   </ul>
