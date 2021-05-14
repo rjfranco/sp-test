@@ -1,0 +1,13 @@
+@use 'colors' as *;
+@import 'normalize';
+@import 'appointment-container';
+
+body,
+html {
+  justify-content: center;
+  background: $light-grey;
+  display: flex;
+  font-family: sans-serif;
+  min-height: 100%;
+  width: 100%;
+}
