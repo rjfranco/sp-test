@@ -6,7 +6,6 @@ export default class LocationRoute extends Route {
   @service store;
 
   model({ service_id: cptCodeId }) {
-    console.log('like ... even trying?');
     let { clinicianId } = ENV.APP;
     return this.store.query('office', { filter: { clinicianId, cptCodeId } });
   }
